@@ -79,8 +79,14 @@ set cursorline
 
 "" Solarized Light color scheme
 colorscheme solarized
-set background=light
 syntax enable
+""" TODO: delegate to environment variable OR bring boxes into sync
+if !has('gui_running') && executable('steam')
+  """ SUPER HACK! steam being installed means it's my home PC :P
+  set background=dark
+else
+  set background=light
+endif
 
 
 " Behavior
@@ -106,16 +112,6 @@ set showmatch
 " Legacy stuff
 " TODO: Port all this stuff
 """
-
-" colors
-"" TODO: environment variable OR bring this into sync
-if has('gui_running')
-  set background=light
-elseif executable('steam')
-  "" SUPER HACK! steam being installed means it's my home PC :P
-  set background=dark
-endif
-
 
 " filetype overrides
 "" TODO install markdown plugin
