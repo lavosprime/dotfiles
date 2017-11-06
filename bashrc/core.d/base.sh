@@ -1,5 +1,6 @@
 
 alias which='type -a'
+alias lx='ls -X --group-directories-first'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
