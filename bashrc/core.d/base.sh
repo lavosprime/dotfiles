@@ -35,7 +35,7 @@ alias again='"$BASH" -c "$(history -p !!)"'
 alias please="sudo again"
 
 # edit bashrc and aliases
-alias eb='vi ~/.bashrc; vi ~/.bash_aliases; . ~/.bashrc'
+alias refresh='. ~/.bashrc'
 
 # move to parent directory and list files
 alias up='cd ..; ls'
