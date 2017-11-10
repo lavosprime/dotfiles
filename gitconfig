@@ -1,7 +1,7 @@
 [color]
   ui = auto
 [alias]
-  am = commit --all --amend --no-edit
+  amend = commit --all --amend --no-edit
 	rekt = checkout -- .
 	sl = log --graph --decorate --branches -n 10 --oneline
 	st = status -s -b
