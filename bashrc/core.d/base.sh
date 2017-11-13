@@ -74,6 +74,9 @@ alias glog="git log --date-order --graph --decorate --oneline"
 # print recent git history
 alias gl="glog -10"
 
+# git management of dotfiles
+alias gdf='git -C ~/dotfiles'
+
 # format markdown as a man page for viewing in less
 mdless () {
   if [ "$1" ]
