@@ -2,6 +2,7 @@
   ui = auto
 [alias]
   amend = commit --all --amend --no-edit
+  co = checkout --progress
 	rekt = checkout -- .
 	sl = log --graph --decorate --branches -n 10 --oneline
 	st = status -s -b
