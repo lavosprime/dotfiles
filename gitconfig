@@ -1,5 +1,7 @@
 [color]
   ui = auto
+[merge]
+	conflictstyle = diff3
 [alias]
   amend = commit --all --amend --no-edit
   co = checkout
