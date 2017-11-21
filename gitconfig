@@ -1,13 +1,13 @@
 [color]
   ui = auto
 [merge]
-	conflictstyle = diff3
+  conflictstyle = diff3
 [push]
-	default = simple
+  default = simple
 [alias]
   amend = commit --all --amend --no-edit
   co = checkout
-	rekt = checkout -- .
-	sl = log --graph --decorate --branches -n 10 --oneline
-	st = status -s -b
+  rekt = checkout -- .
+  sl = log --graph --decorate --branches -n 10 --oneline
+  st = status -s -b
   sync = pull --rebase
