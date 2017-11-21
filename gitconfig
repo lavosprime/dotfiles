@@ -2,6 +2,8 @@
   ui = auto
 [merge]
 	conflictstyle = diff3
+[push]
+	default = simple
 [alias]
   amend = commit --all --amend --no-edit
   co = checkout
