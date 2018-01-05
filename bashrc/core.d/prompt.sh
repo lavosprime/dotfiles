@@ -10,6 +10,7 @@ PS_BLUE='\[\e[0;34m\]'
 PS_PINK='\[\e[0;35m\]'
 PS_VIOLET='\[\e[0;95m\]'
 PS_TEAL='\[\e[0;36m\]'
+PS_FAINT='\[\e[0;92m\]'
 
 ## Helper functions
 
@@ -27,16 +28,16 @@ function _lavosprime_ps_host () {
 }
 
 ## Pieces
+#TODO bold?
 PS_NAME=$PS_BLUE'$(_lavosprime_ps_name)'$PS_CLEAR
-PS_HOST=$PS_GREEN'$(_lavosprime_ps_host)'$PS_CLEAR
+PS_HOST=$PS_TEAL'$(_lavosprime_ps_host)'$PS_CLEAR
 #TODO repo->branch->path?
-PS_DIR=$PS_YELLOW'\w'$PS_CLEAR
+PS_DIR=$PS_GREEN'\w'$PS_CLEAR
 #TODO port to desktop
-# PS_SCM=$PS_ORANGE'$(_dotfiles_scm_info)'$PS_CLEAR
+# PS_SCM=$PS_YELLOW'$(_dotfiles_scm_info)'$PS_CLEAR
 PS_SCM=''
 #TODO can this tick?
-# PS_TIME=$PS_VIOLET'\t'$PS_CLEAR
-PS_TIME=''
+PS_TIME=$PS_FAINT'\t'$PS_CLEAR
 
 ## All together now
 export PS1=$PS_CLEAR'['$PS_NAME'@'$PS_HOST':'$PS_DIR$PS_SCM']\n'$PS_TIME' \$ '
