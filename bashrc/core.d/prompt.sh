@@ -10,7 +10,11 @@ PS_BLUE='\[\e[0;34m\]'
 PS_PINK='\[\e[0;35m\]'
 PS_VIOLET='\[\e[0;95m\]'
 PS_TEAL='\[\e[0;36m\]'
-PS_FAINT='\[\e[0;92m\]'
+case "${LAVOSPRIME_SOLARIZED}" in
+  'light' ) PS_FAINT='\[\e[0;96m\]' ;;
+  'dark'  ) PS_FAINT='\[\e[0;92m\]' ;;
+  *       ) PS_FAINT='\[\e[0;90m\]' ;;
+esac
 
 ## Helper functions
 
