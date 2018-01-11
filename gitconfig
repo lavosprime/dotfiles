@@ -9,6 +9,7 @@
 [alias]
   amend = commit --all --amend --no-edit
   co = checkout
+  ds = diff --staged
   rekt = checkout -- .
   sl = log --graph --decorate --branches -n 10 --oneline
   st = status -s -b
