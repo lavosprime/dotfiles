@@ -10,6 +10,8 @@
   amend = commit --all --amend --no-edit
   co = checkout
   ds = diff --staged
+  ll = log --graph --decorate --branches --pretty='%C(auto)%h %an %cd%d %s' --date=short-local
+
   rekt = checkout -- .
   sl = log --graph --decorate --branches -n 10 --oneline
   st = status -s -b
