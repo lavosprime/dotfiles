@@ -10,9 +10,12 @@
   amend = commit --all --amend --no-edit
   co = checkout
   ds = diff --staged
-  ll = log --graph --decorate --branches --pretty='%C(auto)%h %cd %Cblue%an%Creset%C(auto) %d %s' --date=short-local
+
+  l = log --graph --decorate --branches -n 10 --oneline --invert-grep --grep='AUTOMATION: '
+  la = log --graph --decorate --branches -n 10 --oneline
+  ll = log --graph --decorate --branches --pretty='%C(auto)%h %Cgreen%cd%Creset %Cblue%an%Creset%C(auto) %d %+s' --date=format-local:'%F %T' --invert-grep --grep='AUTOMATION: '
+  lla = log --graph --decorate --branches --pretty='%C(auto)%h %Cgreen%cd%Creset %Cblue%an%Creset%C(auto) %d %+s' --date=format-local:'%F %T'
 
   rekt = checkout -- .
-  sl = log --graph --decorate --branches -n 10 --oneline --invert-grep --grep='AUTOMATION: '
   st = status -s -b
   sync = pull --rebase
