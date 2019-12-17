@@ -11,6 +11,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 "" Highlight and strip trailing whitespace
 Plug 'ntpeters/vim-better-whitespace'
+"" AOSP-specific syntax highlighting
+Plug 'rubberduck203/aosp-vim'
 "" Rust language syntax highlighting
 Plug 'rust-lang/rust.vim'
 "" Easy comment manipulation
