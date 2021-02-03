@@ -86,14 +86,13 @@ set cursorline
 "" Don't show mode on last line (TODO after powerline installation)
 " set noshowmode
 
-"" Solarized Light color scheme
+"" Solarized color scheme
 colorscheme solarized
 syntax enable
-""" TODO: delegate to environment variable OR bring boxes into sync
-if !has('gui_running') && executable('steam')
-  """ SUPER HACK! steam being installed means it's my home PC :P
+if $LAVOSPRIME_SOLARIZED == 'dark'
   set background=dark
-else
+endif
+if $LAVOSPRIME_SOLARIZED == 'light'
   set background=light
 endif
 
