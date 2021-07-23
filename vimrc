@@ -32,6 +32,8 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 "" Jump between source and headers
 Plug 'vim-scripts/a.vim'
+"" Perform git operations from vim
+Plug 'tpope/vim-fugitive'
 
 "" TODO evaluate/troubleshoot/describe
 """ 'bling/vim-bufferline'
@@ -59,7 +61,6 @@ Plug 'vim-scripts/a.vim'
 """ 'sjl/gundo.vim'
 """ 'tmux-plugins/vim-tmux'
 """ 'tpope/vim-abolish'
-""" 'tpope/vim-fugitive'
 """ 'tpope/vim-sleuth'
 """ 'tyru/open-browser.vim'
 """ 'Valloric/YouCompleteMe'
