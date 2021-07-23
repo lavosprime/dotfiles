@@ -100,3 +100,25 @@ periodic-alarm () {
        done
     done
 }
+
+# flush swap to ram, if enough space is available
+flush-swap () {
+  local mem_available=$(awk '/MemAvailable/ { print $2 }' /proc/meminfo)
+  local swap_size=$(awk '/SwapTotal/ { print $2 }' /proc/meminfo)
+  local swap_free=$(awk '/SwapFree/ { print $2 }' /proc/meminfo)
+  local swap_used=$((swap_size-swap_free))
+  if [ $mem_available -le $swap_used ]; then
+    >&2 echo 'not enough memory available to flush swap'
+    return 1
+  fi
+  if [ 0 -eq $swap_used ]; then
+    >&2 echo 'no need to flush unused swap'
+    return 0
+  fi
+  >&2 echo 'need root to flush swap'
+  sudo --validate
+  sudo --non-interactive swapoff --all
+  >&2 echo 'waiting for swap to flush...'
+  sleep 5s
+  sudo --non-interactive swapon --all
+}
