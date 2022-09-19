@@ -16,6 +16,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 "" Smart hybrid/absolute line number toggling
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
+"" Fuzzy file selection
+Plug 'junegunn/fzf'
 "" Highlight and strip trailing whitespace
 Plug 'ntpeters/vim-better-whitespace'
 "" AOSP-specific syntax highlighting
