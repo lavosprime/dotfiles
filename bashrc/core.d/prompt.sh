@@ -31,17 +31,25 @@ function _lavosprime_ps_host () {
   fi
 }
 
+function _lavosprime_ps_scm () {
+  ps_scm_branch="$(git branch --show-current 2>/dev/null)"
+  ps_scm_config="${TARGET_PRODUCT}"
+  if [ ! -z "${ps_scm_config}" ]; then
+    echo " (${ps_scm_config}) ${ps_scm_branch}"
+  else
+    echo " ${ps_scm_branch}"
+  fi
+}
+
 ## Pieces
 #TODO bold?
 PS_NAME=$PS_BLUE'$(_lavosprime_ps_name)'$PS_CLEAR
 PS_HOST=$PS_TEAL'$(_lavosprime_ps_host)'$PS_CLEAR
 #TODO repo->branch->path?
 PS_DIR=$PS_GREEN'\w'$PS_CLEAR
-#TODO port to desktop
-# PS_SCM=$PS_YELLOW'$(_dotfiles_scm_info)'$PS_CLEAR
-PS_SCM=''
+PS_SCM=$PS_YELLOW'$(_lavosprime_ps_scm)'$PS_CLEAR
 #TODO can this tick?
 PS_TIME=$PS_FAINT'\t'$PS_CLEAR
 
 ## All together now
-export PS1=$PS_CLEAR'['$PS_NAME'@'$PS_HOST':'$PS_DIR$PS_SCM']\n'$PS_TIME' \$ '
+export PS1=$PS_CLEAR'['$PS_NAME'@'$PS_HOST':'$PS_DIR']'$PS_SCM'\n'$PS_TIME' \$ '
